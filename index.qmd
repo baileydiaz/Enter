@@ -13,6 +13,24 @@ title-block-banner: true
 
 
 ```{python}
-print("hello world")
+import altair as alt
+import pandas as pd
+
+# Sample data
+data = pd.DataFrame({
+    'x': range(10),
+    'y': [i ** 2 for i in range(10)]
+})
+
+# Create a scatter plot
+chart = alt.Chart(data).mark_point().encode(
+    x='x',
+    y='y'
+)
+
+# Show the chart
+chart.show()
+
+
 ```
 
