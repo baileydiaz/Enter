@@ -1,7 +1,7 @@
 {
-  "hash": "e1ca8ddb63dcd479bd6832d734134872",
+  "hash": "08feaec39356eb2eeccab15cf9c5d6cb",
   "result": {
-    "markdown": "---\ntitle: \"Post With Code\"\nauthor: \"Harlow Malloc\"\ndate: \"2024-04-23\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n---\n\nThis is a post with executable code.\n\n::: {.cell execution_count=1}\n``` {.python .cell-code}\nprint(\"hello world\")\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nhello world\n```\n:::\n:::\n\n\n",
+    "markdown": "---\ntitle: \"Post With Code\"\nauthor: \"Harlow Malloc\"\ndate: \"2024-04-23\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\nexecute:\n  echo: false\n---\n\nThis is a post with executable code.\nRun\n\n::: {.cell execution_count=1}\n\n::: {.cell-output .cell-output-stdout}\n```\nhello world\n```\n:::\n:::\n\n\n",
     "supporting": [
       "index_files"
     ],
