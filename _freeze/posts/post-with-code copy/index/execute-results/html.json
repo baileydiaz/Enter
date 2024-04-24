@@ -1,0 +1,11 @@
+{
+  "hash": "182a931d4aa59c4ebe55f3bfc199a3b2",
+  "result": {
+    "markdown": "---\ntitle: \"Post With Code\"\nauthor: \"Harlow Malloc\"\ndate: \"2024-04-23\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\nexecute:\n  echo: false\n---\n\nThis is a post with executable code.\nRun\n\n::: {.cell execution_count=1}\n\n::: {.cell-output .cell-output-stdout}\n```\nhello world\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

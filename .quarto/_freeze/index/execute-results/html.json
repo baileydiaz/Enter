@@ -1,7 +1,7 @@
 {
-  "hash": "d609f7bf4379f54a1f40fbc60598dfff",
+  "hash": "f556c27164adb3b63bcf110dfe15899e",
   "result": {
-    "markdown": "---\ntitle: Enter\nlisting:\n  contents: posts\n  sort: date desc\n  type: default\n  categories: true\n  sort-ui: false\n  filter-ui: false\npage-layout: full\ntitle-block-banner: true\nexecute:\n  echo: false\n---\n\n",
+    "markdown": "---\ntitle: Enter\nlisting:\n  contents: posts\n  sort: date desc\n  type: default\n  categories: true\n  sort-ui: false\n  filter-ui: false\npage-layout: full\ntitle-block-banner: true\n---\n\n",
     "supporting": [
       "index_files"
     ],

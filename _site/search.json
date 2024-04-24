@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Enter",
     "section": "",
-    "text": "news\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nApr 23, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "news\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nApr 23, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nApr 23, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -19,6 +19,13 @@
     "title": "Post With Code",
     "section": "",
     "text": "print(\"hello world\")\n\nhello world"
+  },
+  {
+    "objectID": "posts/post-with-code copy/index.html",
+    "href": "posts/post-with-code copy/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "hello world"
   },
   {
     "objectID": "posts/welcome/index.html",

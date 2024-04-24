@@ -12,8 +12,5 @@ This is a post with executable code.
 Run
 
 ```{python}
-
-#| echo: false
-
 print("hello world")
 ```
