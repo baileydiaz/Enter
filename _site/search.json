@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Enter",
     "section": "",
-    "text": "news\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nApr 23, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nApr 23, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "news\n\n\n\n\n\n\n\n\n\n\n\nMay 29, 2024\n\n\nBailey Diaz\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nApr 23, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -30,8 +30,36 @@
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "title": "BYUI Education Project",
     "section": "",
-    "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "For the past few weeks I have been working with Benjamin Pacini on his doctoral dissertation. His topic of interest is, what makes a good teacher?\nTo start off, I decided to create a model that predicts Danielson scores based off of Disposition scores. Danielson scores are the scores that evaluators give student teachers. They evaluate how well they do at controlling the classroom, teaching ability, and so fourth.\nWhat we are using to predict Danielson scores are called dispositions. Dispositions are scores that professors give their students. These are essentially judgements calls and ask questions such as, “Does this person seem to enjoy being with children?”\nSo, my initial analysis investigated the following train of thought, do these judgement calls (dispositions) seem to have a relation to the actual student teacher evaluations?\nTo clarify, the dispositions are done when the student teacher is not present."
+  },
+  {
+    "objectID": "posts/welcome/index.html#danielson-predictor",
+    "href": "posts/welcome/index.html#danielson-predictor",
+    "title": "BYUI Education Project",
+    "section": "Danielson Predictor",
+    "text": "Danielson Predictor\nThese are the results of a very simple regression and the r-squared does not imply that we have strong correlation. However, in social sciences we do not expect to see very high r-squared values. In all honesty, this r-squared is higher than any other regression that we have tried.\n\n\n\n\n\n\n\n\n\n\n\n\n \nEstimate\nStd. Error\nt value\nPr(>|t|)\n\n\n\n\n(Intercept)\n-0.01393\n0.02847\n-0.4892\n0.6248\n\n\nDisposition_highest_level\n0.4462\n0.03016\n14.8\n1.15e-44\n\n\n\n\nFitting linear model: Danielson_492 ~ Disposition_highest_level\n\n\n\n\n\n\n\n\nObservations\nResidual Std. Error\n\\(R^2\\)\nAdjusted \\(R^2\\)\n\n\n\n\n938\n0.8717\n0.1895\n0.1887"
+  },
+  {
+    "objectID": "posts/welcome/index.html#robust-standard-errors",
+    "href": "posts/welcome/index.html#robust-standard-errors",
+    "title": "BYUI Education Project",
+    "section": "Robust Standard Errors",
+    "text": "Robust Standard Errors\nThe chair for Brother Pacini’s research has mentioned the importance of residual standard errors. I need to investigate the importance of this metric and see how it can apply to our research.\n\n\n\n-0.01393\n\n0.4462\n0.02863\n0.04713\n-0.4865\n9.466\n0.6268\n2.285e-20"
+  },
+  {
+    "objectID": "posts/welcome/index.html#graph",
+    "href": "posts/welcome/index.html#graph",
+    "title": "BYUI Education Project",
+    "section": "Graph",
+    "text": "Graph\n\n\n              (Intercept) Disposition_highest_level \n              -0.01392646                0.44617503 \n\n\n\n\n\n#!!!!!!"
+  },
+  {
+    "objectID": "posts/welcome/index.html#checking-requirements",
+    "href": "posts/welcome/index.html#checking-requirements",
+    "title": "BYUI Education Project",
+    "section": "Checking Requirements",
+    "text": "Checking Requirements"
   }
 ]
