@@ -5,9 +5,9 @@ date: "2024-05-29"
 categories: [news]
 ---
 
-```{r setup, include=FALSE} 
+<!-- ```{r setup, include=FALSE} 
 knitr::opts_chunk$set(warning = FALSE, message = FALSE, echo = FALSE) 
-```
+``` -->
 
 For the past few weeks I have been working with Benjamin Pacini on his doctoral dissertation.  His topic of interest is, what makes a good teacher?  
 
