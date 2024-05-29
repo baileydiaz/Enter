@@ -1,12 +1,94 @@
 ---
-title: "Welcome To My Blog"
-author: "Tristan O'Malley"
-date: "2024-04-20"
+title: "BYUI Education Project"
+author: "Bailey Diaz"
+date: "2024-05-29"
 categories: [news]
 ---
 
-This is the first post in a Quarto blog. Welcome!
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, echo = FALSE) 
+```
 
-![](thumbnail.jpg)
 
-Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+```{r}
+library(arrow)
+library(ggplot2)
+library(tidyverse)
+library(pander)
+library(car)
+library(readxl)
+library(dplyr)
+
+library(sandwich)
+library(lmtest)
+
+```
+
+
+```{r}
+# Read the Parquet file
+demos <- read_parquet("C:/Users/19518/Desktop/byui_education_project/Data/demographics.parquet")
+
+teacher_data <- read_parquet("C:/Users/19518/Desktop/byui_education_project/Data/All_teacher_info.parquet")
+
+combined = merge(demos, teacher_data, by = "StudentID")
+
+no_na <- combined %>%
+  filter(!is.na(Danielson_492)) %>% 
+  filter(!is.na(Disposition_400))
+
+#no_na <- no_na[, c("StudentID", "Danielson_492", "Disposition_400")]
+
+no_na <- no_na %>%
+  group_by(StudentID) %>%
+  slice(1) %>%
+  ungroup()
+
+View(no_na)
+
+
+  
+```
+
+## Danielson Predictor
+```{r}
+## This appears to be interesting.  
+mylm <- lm(Danielson_492 ~ Disposition_highest_level, data = no_na)
+
+pander(summary(mylm))
+
+```
+
+
+## Robust Standard Errors
+```{r}
+pander(coeftest(mylm, vcov = vcovHC(mylm, type="HC1")))
+```
+
+
+## Graph
+
+```{r}
+b <- coef(mylm)
+
+b
+
+ggplot(teacher_data, aes(x = Disposition_400, y = Danielson_492)) +
+  geom_point() +
+  geom_smooth(method = "loess", se = FALSE, color = "red")+
+  stat_function(fun = function(x) b[1] + b[2]*x + b[3]*x^2, color="blue") 
+```
+
+#!!!!!!
+
+## Checking Requirements
+
+```{r}
+
+#boxCox(mylm)
+
+par(mfrow=c(1,3))
+plot(mylm,which=1:2)
+plot(mylm$residuals)
+```
+
