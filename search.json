@@ -25,28 +25,28 @@
     "href": "posts/welcome/index.html#danielson-predictor",
     "title": "BYUI Education Project",
     "section": "Danielson Predictor",
-    "text": "Danielson Predictor\nThese are the results of a very simple regression and the r-squared does not imply that we have strong correlation. However, in social sciences we do not expect to see very high r-squared values. In all honesty, this r-squared is higher than any other regression that we have tried.\n\n## This appears to be interesting.  \nmylm <- lm(Danielson_492 ~ Disposition_highest_level, data = no_na)\n\npander(summary(mylm))\n\n\n\n\n\n\n\n\n\n\n\n \nEstimate\nStd. Error\nt value\nPr(>|t|)\n\n\n\n\n(Intercept)\n-0.01393\n0.02847\n-0.4892\n0.6248\n\n\nDisposition_highest_level\n0.4462\n0.03016\n14.8\n1.15e-44\n\n\n\n\nFitting linear model: Danielson_492 ~ Disposition_highest_level\n\n\n\n\n\n\n\n\nObservations\nResidual Std. Error\n\\(R^2\\)\nAdjusted \\(R^2\\)\n\n\n\n\n938\n0.8717\n0.1895\n0.1887"
+    "text": "Danielson Predictor\nThese are the results of a very simple regression and the r-squared does not imply that we have strong correlation. However, in social sciences we do not expect to see very high r-squared values. In all honesty, this r-squared is higher than any other regression that we have tried.\n\n\n\n\n\n\n\n\n\n\n\n\n \nEstimate\nStd. Error\nt value\nPr(>|t|)\n\n\n\n\n(Intercept)\n-0.01393\n0.02847\n-0.4892\n0.6248\n\n\nDisposition_highest_level\n0.4462\n0.03016\n14.8\n1.15e-44\n\n\n\n\nFitting linear model: Danielson_492 ~ Disposition_highest_level\n\n\n\n\n\n\n\n\nObservations\nResidual Std. Error\n\\(R^2\\)\nAdjusted \\(R^2\\)\n\n\n\n\n938\n0.8717\n0.1895\n0.1887"
   },
   {
     "objectID": "posts/welcome/index.html#robust-standard-errors",
     "href": "posts/welcome/index.html#robust-standard-errors",
     "title": "BYUI Education Project",
     "section": "Robust Standard Errors",
-    "text": "Robust Standard Errors\nThe chair for Brother Pacini’s research has mentioned the importance of residual standard errors. I need to investigate the importance of this metric and see how it can apply to our research.\n\npander(coeftest(mylm, vcov = vcovHC(mylm, type=\"HC1\")))\n\nWarning in pander.default(coeftest(mylm, vcov = vcovHC(mylm, type = \"HC1\"))): No\npander.method for \"coeftest\", reverting to default.\n\n\n\n-0.01393\n\n0.4462\n0.02863\n0.04713\n-0.4865\n9.466\n0.6268\n2.285e-20"
+    "text": "Robust Standard Errors\nThe chair for Brother Pacini’s research has mentioned the importance of residual standard errors. I need to investigate the importance of this metric and see how it can apply to our research.\n\n\n\n-0.01393\n\n0.4462\n0.02863\n0.04713\n-0.4865\n9.466\n0.6268\n2.285e-20"
   },
   {
     "objectID": "posts/welcome/index.html#graph",
     "href": "posts/welcome/index.html#graph",
     "title": "BYUI Education Project",
     "section": "Graph",
-    "text": "Graph\n\nb <- coef(mylm)\n\nb\n\n              (Intercept) Disposition_highest_level \n              -0.01392646                0.44617503 \n\nggplot(teacher_data, aes(x = Disposition_400, y = Danielson_492)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", se = FALSE, color = \"red\")+\n  stat_function(fun = function(x) b[1] + b[2]*x, color=\"blue\") \n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 6614 rows containing non-finite values (`stat_smooth()`).\n\n\nWarning: Removed 6614 rows containing missing values (`geom_point()`).\n\n\n\n\n\nOn the graph we have a lowess curve along with the line that our regression created. Lowess curves essentially creates local averages and graphs those. On some level it shows us the “ideal” curve. So, the “ideal” is blue and the current is red. We are very close to the ideal, so what else can be done?"
+    "text": "Graph\n\n\n              (Intercept) Disposition_highest_level \n              -0.01392646                0.44617503 \n\n\n\n\n\nOn the graph we have a lowess curve along with the line that our regression created. Lowess curves essentially creates local averages and graphs those. On some level it shows us the “ideal” curve. So, the “ideal” is blue and the current is red. We are very close to the ideal, so what else can be done?"
   },
   {
     "objectID": "posts/welcome/index.html#checking-requirements",
     "href": "posts/welcome/index.html#checking-requirements",
     "title": "BYUI Education Project",
     "section": "Checking Requirements",
-    "text": "Checking Requirements\nThen, I decided to check the normality requirements for the regression. If these diagnostic plots are not within normal bounds then that leads us to doubt any discoveries made due to our analysis. The biggest concern for me is the second plot. The data points are supposed to be on a line. You can see that they deviate from that line.\n\n#boxCox(mylm)\n\npar(mfrow=c(1,3))\nplot(mylm,which=1:2)\nplot(mylm$residuals)"
+    "text": "Checking Requirements\nThen, I decided to check the normality requirements for the regression. If these diagnostic plots are not within normal bounds then that leads us to doubt any discoveries made due to our analysis. The biggest concern for me is the second plot. The data points are supposed to be on a line. You can see that they deviate from that line."
   },
   {
     "objectID": "posts/welcome/index.html#transformations",
