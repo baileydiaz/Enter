@@ -39,13 +39,20 @@
     "href": "posts/welcome/index.html#graph",
     "title": "BYUI Education Project",
     "section": "Graph",
-    "text": "Graph\n\n\n              (Intercept) Disposition_highest_level \n              -0.01392646                0.44617503 \n\n\n\n\n\n#!!!!!!"
+    "text": "Graph\n\n\n              (Intercept) Disposition_highest_level \n              -0.01392646                0.44617503 \n\n\n\n\n\nOn the graph we have a lowess curve along with the line that our regression created. Lowess curves essentially creates local averages and graphs those. On some level it shows us the “ideal” curve. So, the “ideal” is blue and the current is red. We are very close to the ideal, so what else can be done?"
   },
   {
     "objectID": "posts/welcome/index.html#checking-requirements",
     "href": "posts/welcome/index.html#checking-requirements",
     "title": "BYUI Education Project",
     "section": "Checking Requirements",
-    "text": "Checking Requirements"
+    "text": "Checking Requirements\nThen, I decided to check the normality requirements for the regression. If these diagnostic plots are not within normal bounds then that leads us to doubt any discoveries made due to our analysis. The biggest concern for me is the second plot. The data points are supposed to be on a line. You can see that they deviate from that line."
+  },
+  {
+    "objectID": "posts/welcome/index.html#transformations",
+    "href": "posts/welcome/index.html#transformations",
+    "title": "BYUI Education Project",
+    "section": "Transformations",
+    "text": "Transformations\nThe data I used for this analysis utilizes z-scores instead of the raw data. Transformations could possibly help with the normality of the data and give more validity to our research. The current state of the data does not allow me to use transformations. As a result, I have begun to wrangle the raw data so that I can perform transformations and gather cleaner more valuable and reliable insights from the data."
   }
 ]
