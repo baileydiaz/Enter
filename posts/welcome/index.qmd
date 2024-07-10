@@ -82,12 +82,19 @@ pander(coeftest(mylm, vcov = vcovHC(mylm, type="HC1")))
 ```{r}
 b <- coef(mylm)
 
-b
-
 ggplot(teacher_data, aes(x = Disposition_400, y = Danielson_492)) +
   geom_point() +
-  geom_smooth(method = "loess", se = FALSE, color = "red")+
-  stat_function(fun = function(x) b[1] + b[2]*x, color="blue") 
+  geom_smooth(aes(color = "lowess"), method = "loess", se = FALSE) +
+  stat_function(aes(color = "our model"), fun = function(x) b[1] + b[2]*x) +
+  scale_color_manual(values = c("lowess" = "red", "our model" = "blue")) +
+  labs(
+    title = "Data does not appear to follow trends",
+    x = "400 Level Disposition Scores",
+    y = "400 Level Danielson Scores",
+    color = NULL
+  ) +
+  theme_bw() +
+  theme(plot.title = element_text(hjust = 0.5))
 ```
  On the graph we have a lowess curve along with the line that our regression created.  Lowess curves essentially creates local averages and graphs those.  On some level it shows us the "ideal" curve.  So, the "ideal" is blue and the current is red.  We are very close to the ideal, so what else can be done?
 
